@@ -1,0 +1,188 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* Menú de navegación */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Fondo transparente */
+  padding: 15px;
+  z-index: 100;
+}
+
+/* Contenedor del navbar */
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Estilos para el logo */
+.logo img {
+  height: 100px; /* Ajusta el tamaño del logo según sea necesario */
+  width: auto;
+}
+
+/* Estilos del menú */
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar ul li {
+  margin: 0 20px;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #44ca46; /* Color principal para el efecto hover */
+}
+
+/* Sección de video con texto */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.hero-text h1 {
+  color: #fff;
+  font-size: 4em;
+  text-align: center;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  letter-spacing: 3px;
+}
+
+/* Sección de destacados */
+.parche {
+    padding: 50px 20px;
+    background-color: #f4f4f4; /* Fondo claro */
+  }
+  
+  .titulo h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+  
+  /* Estilos para cada noticia destacada */
+  .destacado {
+    max-width: 1200px; /* Tamaño máximo de la tarjeta */
+    margin: 0 auto 40px; /* Centramos la tarjeta y agregamos margen inferior */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff; /* Fondo blanco para las tarjetas */
+  }
+  
+  .destacado:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Estilos para la imagen */
+  .destacado .imagen img {
+    width: 100%; /* Imagen toma todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-height: 400px; /* Altura máxima de la imagen */
+    object-fit: cover; /* Asegura que la imagen se ajuste dentro del contenedor */
+    border-radius: 12px 0 0 12px; /* Bordes redondeados para la imagen */
+  }
+  
+  /* Contenido de la noticia */
+  .destacado h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin: 20px 0;
+    transition: color 0.3s ease;
+  }
+  
+  .destacado h3 a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .destacado h3 a:hover {
+    color: rgb(5, 231, 254); /* Color principal en hover */
+  }
+  
+  .destacado p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0 0 20px;
+  }
+  
+  /* Ajustes para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .destacado {
+      text-align: center;
+    }
+    
+    .destacado .imagen img {
+      border-radius: 12px 12px 0 0;
+    }
+    
+    .destacado h3 {
+      font-size: 1.5em;
+    }
+    
+    .destacado p {
+      padding: 0 15px;
+    }
+  }
+  
+  /* Enlaces */
+  .destacado a {
+    color: rgb(5, 231, 254);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .destacado a:hover {
+    color: rgb(4, 185, 203); /* Tono más oscuro para el hover */
+  }
+  
+  /* Efecto Hover */
+  .destacado:hover .imagen img {
+    opacity: 0.9; /* Ligeramente oscurecer la imagen al pasar el mouse */
+    transition: opacity 0.3s ease;
+  }
+  
